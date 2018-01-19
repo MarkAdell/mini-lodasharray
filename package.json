@@ -1,0 +1,23 @@
+{
+  "name": "mini-lodasharray",
+  "version": "1.0.0",
+  "description": "lodash array",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkAdell/mini-lodasharray.git"
+  },
+  "author": "Mark Adel <mark.adell@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarkAdell/mini-lodasharray/issues"
+  },
+  "homepage": "https://github.com/MarkAdell/mini-lodasharray#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.0"
+  }
+}
