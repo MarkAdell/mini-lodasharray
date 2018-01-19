@@ -1,7 +1,7 @@
 {
   "name": "mini-lodasharray",
   "version": "1.0.0",
-  "description": "lodash array",
+  "description": "mini array functions library",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/"
