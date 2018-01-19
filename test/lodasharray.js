@@ -3,7 +3,7 @@ const _ = require('../');
 
 describe('concat function', () => {
     it('should return the concatination of values of passed arrays with any other types', () => {
-        expect(_.concat([1],[2,3],4,{n: 5})).to.be.eql([1,2,3,4,{n: 5}]);
+        expect(_.concat([1],[2,3],4,{n: 5})).to.eql([1,2,3,4,{n: 5}]);
     });
 });
 
@@ -24,5 +24,12 @@ describe('range function', () => {
     });
     it('should return an empty array if called without parameters', () => {
         expect(_.range()).to.eql([]);
+    });
+});
+
+describe('remove function', () => {
+    it('should return the array after removing from it elements based on the passed function', () => {
+        expect(_.remove([1,2,3,4,5], el => el % 2 === 0)).to.eql([1,3,5]);
+        expect(_.remove([{n: 1}, {n: 2}], el => el.n === 1)).to.eql([{n: 2}]);
     });
 });
