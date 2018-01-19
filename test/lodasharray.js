@@ -33,3 +33,22 @@ describe('remove function', () => {
         expect(_.remove([{n: 1}, {n: 2}], el => el.n === 1)).to.eql([{n: 2}]);
     });
 });
+
+describe('shuffle function', () => {
+    let mainArr = [];
+    for (let i = 0; i < 1000; i++) {
+        mainArr.push(i);
+    }
+    let shuffledArr = _.shuffle(mainArr);
+    it('should return the array after shuffling it', () => {   
+        let countDiff = 0;
+        for (let i = 0; i < 1000; i++) {
+            countDiff += (mainArr[i] !== shuffledArr[i]);
+        }
+        expect(countDiff).to.be.above(100);
+    });
+    it('should not return an array of different elements', () => {
+        shuffledArr.sort((a, b) => a - b);
+        expect(mainArr).to.eql(shuffledArr);
+    });
+});
