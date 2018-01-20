@@ -19,7 +19,7 @@ const _ = require('mini-lodasharray');
 
 console.log(_.uniq([1, 1, 2, 2, 3])); // [1, 2, 3]
 
-console.log(_.remove([1, 2, 3, 4, 5], el => el % 2 == 0)); // [1, 3, 5]
+console.log(_.remove([1, 2, 3, 4, 5], el => el % 2 === 0)); // [1, 3, 5]
 
 console.log(_.remove([{ n: 1 }, { n: 2 }], el => el.n === 1)); // [{n: 2}]
 
